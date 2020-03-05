@@ -1,0 +1,16 @@
+INDEX VERSION 1.131+/home/adminl/Bureau/WORKSPACEVRAI/.metadata/.plugins/org.eclipse.jdt.core
+4025759461.index
+1584281474.index
+2800847218.index
+2442137070.index
+2609696133.index
+3140529928.index
+139241218.index
+3733026965.index
+1812219895.index
+3401904096.index
+1815200593.index
+4016149362.index
+666894227.index
+4282560308.index
+2869094764.index
