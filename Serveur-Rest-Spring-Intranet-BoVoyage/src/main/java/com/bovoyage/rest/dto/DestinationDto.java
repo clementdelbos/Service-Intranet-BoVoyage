@@ -5,11 +5,13 @@ import com.bovoyage.rest.entities.Destination;
 
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
 @Getter
 @Setter
+@NoArgsConstructor
 @ToString
 public class DestinationDto{
 
@@ -17,6 +19,8 @@ public class DestinationDto{
 	private String region;
 	private String description;
 	private int deleted;
+	
+	
 	
 	public DestinationDto(Destination destination) {
 		this.id = destination.getId();

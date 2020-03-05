@@ -20,6 +20,7 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -44,13 +45,13 @@ public class Destination implements Serializable{
 	
 	private int deleted;
 	
-	@OneToMany(cascade=CascadeType.ALL, fetch= FetchType.EAGER)
+	@OneToMany(cascade=CascadeType.ALL, fetch= FetchType.LAZY)
 	@JoinColumn(name="fk_destination")
 	private List<DatesVoyages> datesVoyages = new ArrayList<>();
 	
 
 	@Embedded
-	@Basic(fetch = FetchType.EAGER)
+	@Basic(fetch = FetchType.LAZY)
 	private List<Image> images = new ArrayList<>();
 	
 	public Destination() {}

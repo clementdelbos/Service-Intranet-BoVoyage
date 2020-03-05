@@ -60,7 +60,7 @@ public class DatesVoyages implements Serializable{
 	@Column (name="nb_places")
 	private int nbPlaces;
 	
-	@ManyToOne(fetch=FetchType.EAGER)
+	@ManyToOne(fetch=FetchType.LAZY)
 	@JoinColumn(name="fk_destination")
 	private Destination destination;
 	

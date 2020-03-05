@@ -26,3 +26,76 @@ Binding(CTRL+SHIFT+T,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2020-03-05 15:23:30.580
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:37.554
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:37.554
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@cfe72b0[org.springframework.tooling.boot.ls:1.15.0.202001210741(id=624)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:37.555
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:37.574
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.853
+!MESSAGE Boot LS startup time from start to initialized: 1294ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.885
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ChKHTgPTisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.887
+!MESSAGE subscribing to classpath changes: sts4.classpath.ChKHTgPT isBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.889
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.891
+!MESSAGE subsribers = {sts4.classpath.ChKHTgPT=Send Classpath Notifications(113)}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.891
+!MESSAGE Sending initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.892
+!MESSAGE project Serveur-Rest-Spring-Intranet-BoVoyage ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.892
+!MESSAGE Sending initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.892
+!MESSAGE Preparing classpath changed notification Serveur-Rest-Spring-Intranet-BoVoyage
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.892
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ChKHTgPT => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.892
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.896
+!MESSAGE classpath=124 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.897
+!MESSAGE buffering callback sts4.classpath.ChKHTgPT Serveur-Rest-Spring-Intranet-BoVoyage false 124
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.897
+!MESSAGE executing callback sts4.classpath.ChKHTgPT 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-03-05 15:55:38.924
+!MESSAGE executing callback sts4.classpath.ChKHTgPT SUCCESS [done]
+
+!ENTRY org.eclipse.lsp4e 4 0 2020-03-05 16:18:01.446
+!MESSAGE 
+!STACK 0
+java.lang.InterruptedException
+	at java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:347)
+	at java.util.concurrent.CompletableFuture.get(CompletableFuture.java:1928)
+	at org.springframework.tooling.boot.ls.jdt.LSPTextHover.getHoverInfo(LSPTextHover.java:109)
+	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo2(SpringBootJavaHoverProvider.java:42)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:165)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:132)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)

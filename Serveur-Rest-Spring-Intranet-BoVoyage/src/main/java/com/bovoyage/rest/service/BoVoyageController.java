@@ -1,5 +1,6 @@
 package com.bovoyage.rest.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,10 +15,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bovoyage.rest.dto.DestinationDto;
 import com.bovoyage.rest.entities.DatesVoyages;
-
-
+import com.bovoyage.rest.entities.Destination;
 import com.bovoyage.rest.repository.DatesVoyagesRepository;
-import com.bovoyage.rest.repository.DestinationDtoRepository;
+import com.bovoyage.rest.repository.DestinationRepository;
 
 
 @RestController
@@ -26,7 +26,7 @@ public class BoVoyageController {
 
 
 	@Autowired DatesVoyagesRepository repoDatesVoyages;
-	@Autowired DestinationDtoRepository repoDestinationDto;
+	@Autowired DestinationRepository repoDestination;
 
 	
 	
@@ -35,15 +35,20 @@ public class BoVoyageController {
 		/////DESTINATIONS/////
 	@GetMapping("/destinations/all")
 	public List<DestinationDto> getAllDestinations(){
-		return repoDestinationDto.findAll();
+		List<Destination> destinations=repoDestination.findAll();
+		List<DestinationDto> dtos=new ArrayList<>();
+		for(Destination d: destinations) {
+			dtos.add(new DestinationDto(d));
+		}
+		return dtos;
 	}
 	
-	//BONUS/////REGIONS/////
-	@GetMapping("/destination/region/all")
-	List <String> findAllRegions(){
-		
-		return repoDestinationDto.findAllRegions();
-	}
+//	//BONUS/////REGIONS/////
+//	@GetMapping("/destination/region/all")
+//	List <String> findAllRegions(){
+//		
+//		return repoDestination.findAllRegions();
+//	}
 
 	
 	//////////////////////////////////GET BY ID////////////////////////////////////
@@ -69,12 +74,12 @@ public class BoVoyageController {
 	@GetMapping("/destination/id/{id}")
 	public DestinationDto getDestinationById(@PathVariable("id") Long id) {
 		
-		Optional<DestinationDto> destinationdto = repoDestinationDto.findById(id);
-		if(!destinationdto.isPresent())
+		Optional<Destination> destination = repoDestination.findById(id);
+		if(!destination.isPresent())
 		{
 			throw new RuntimeException("id non trouvé : "+id);
 		}		
-		return destinationdto.get();
+		return new DestinationDto (destination.get());
 	}
 
 
@@ -83,9 +88,9 @@ public class BoVoyageController {
 	
 	/////CREATE DESTINATION/////
 	@PostMapping("/destination/new")
-	public void createDestination(@RequestBody DestinationDto destinationdto) {
+	public void createDestination(@RequestBody Destination destination) {
 		
-		repoDestinationDto.save(destinationdto);
+		repoDestination.save(destination);
 	}
 	
 	/////CREATE OR UPDATE CLIENT/////
